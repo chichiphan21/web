@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+select,
+textarea {
+	background-color: transparent;
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+	background-color: transparent;
+	outline: none;
+	border: 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	min-height: 100vh;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1;
+	background: linear-gradient(
+		90deg,
+		rgba(76, 141, 178, 1) 0%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.layouts {
+	display: grid;
+	gap: 4px;
+	grid-template-columns: 0.1fr repeat(2, 1fr);
+	grid-template-rows: 0.2fr 2fr 2fr 0.5fr;
+	grid-template-areas:
+		"sidebar header header"
+		"sidebar main main"
+		"sidebar main main"
+		"sidebar foooter footer";
+}
+
+header {
+	grid-area: header;
+	padding-inline: 56px 64px;
+}
+
+.header {
+	display: flex;
+	padding-top: 30px;
+	justify-content: space-between;
+}
+
+.header-left {
+	position: relative;
+}
+
+.header-left svg {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.header-left input {
+	width: 406px;
+	height: 56px;
+	top: 21px;
+	left: 115px;
+	border-radius: 30px;
+	opacity: 40%;
+	background-color: #d9d9d9;
+	padding-left: 20px;
+	color: black;
+}
+
+.header-left input::placeholder {
+	color: black;
+	opacity: 1;
+}
+
+.header-right {
+	width: 192px;
+	height: 34px;
+	display: flex;
+	padding-left: 10px;
+	padding-right: 26px;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 15px;
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.title {
+	margin-top: 52px;
+	width: 100%;
+	height: 391px;
+	background-image: url("../img/backg.png");
+	border-radius: 15px;
+}
+
+.title h2 {
+	color: #fff;
+
+	padding-top: 76px;
+	padding-left: 57px;
+	padding-bottom: 291px;
+	font-size: 60px;
+	font-weight: 900;
+}
+
+.discography {
+	margin-top: 75px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.list-song {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.play {
+	width: 345px;
+
+	background: rgba(217, 217, 217, 0.4);
+	border-radius: 15px;
+}
+
+.play-song {
+	margin-top: 30px;
+	width: 345px;
+	height: 407px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.play-song img {
+	width: 311px;
+	height: 283px;
+}
+
+.inf {
+	display: flex;
+	justify-content: center;
+	width: 345px;
+	margin-top: 20px;
+	gap: 15px;
+	padding-bottom: 10px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.from {
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	padding-top: 22px;
+}
+
+.list-music {
+	margin-top: 100px;
+}
+
+.list-music h2 {
+	margin-top: 55px;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 50px;
+	font-weight: 700;
+	height: 10px;
+	font-size: 0.9em;
+	margin: 25px 0;
+}
+
+.songs {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.songs th,
+.songs td {
+	padding: 12px 15px;
+}
+
+.songs th {
+	width: 210px;
+}
+
+.songs th:first-child h2 {
+	min-width: 180px;
+}
+
+.time h2 {
+	position: relative;
+}
+
+.active > h2::before {
+	content: url("../img/heart.svg");
+
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 20%;
+	transform: translateY(-50%);
+}
+
+.songs tr {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #fff;
+}
+
+.name-song {
+	display: flex;
+}
+
+main {
+	grid-area: main;
+	padding-inline: 56px 64px;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	background: rgba(0, 0, 0, 0.76);
+}
+
+.slidebar-logo {
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+.slidebar-function {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 450px;
+	min-height: 30px;
+	gap: 30px;
+}
+
+.slidebar-function svg {
+	width: 50px;
+	height: 60px;
+}
+
+footer {
+	grid-area: footer;
+}
